@@ -19,7 +19,7 @@ final class NoOpDispatcher implements EventDispatcher
      *
      * @template T as Event
      */
-    public function dispatch($event)
+    public function dispatch(Event $event)
     {
         return $event;
     }

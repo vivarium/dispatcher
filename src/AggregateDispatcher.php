@@ -35,7 +35,7 @@ final class AggregateDispatcher implements EventDispatcher
      *
      * @template T as Event
      */
-    public function dispatch($event)
+    public function dispatch(Event $event)
     {
         /** @var Sequence<ListenerAndPriority<Event>> $listeners */
         $listeners = new ArraySequence();
