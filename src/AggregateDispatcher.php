@@ -23,9 +23,9 @@ final class AggregateDispatcher implements EventDispatcher
     /**
      * @no-named-arguments
      */
-    public function __construct(EventListenerProvider ...$provider)
+    public function __construct(EventListenerProvider $provider, EventListenerProvider ...$providers)
     {
-        $this->providers = new ArraySequence(...$provider);
+        $this->providers = new ArraySequence(...array_merge([$provider], $providers));
     }
 
     /**
